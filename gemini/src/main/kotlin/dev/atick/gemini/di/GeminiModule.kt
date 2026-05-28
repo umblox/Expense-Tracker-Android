@@ -70,12 +70,12 @@ object GeminiModule {
     fun provideGeminiClient(): GenerativeModel {
         return Firebase.ai(backend = GenerativeBackend.googleAI())
             .generativeModel(
-                modelName = "gemini-3.1-flash-lite-preview",
+                modelName = "gemini-2.5-flash",
                 generationConfig = generationConfig {
                     temperature = 0.15f
                     topK = 32
                     topP = 1f
-                    maxOutputTokens = 256
+                    maxOutputTokens = 1000
                     responseMimeType = "application/json"
                     responseSchema = Schema.obj(
                         title = "expense",
