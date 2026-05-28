@@ -1,0 +1,1 @@
+sourceset_dependencies = '{":app/release":[],":gemini/release":[],":storage:preferences/release":[],":core:ui/release":[],":core:android/release":[],":sms/release":[],":storage:room/release":[],":network/release":[]}'
