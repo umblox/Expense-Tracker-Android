@@ -149,12 +149,12 @@ object GeminiModule {
     fun provideChatModel(): GenerativeModel {
         return Firebase.ai(backend = GenerativeBackend.googleAI())
             .generativeModel(
-                modelName = "gemini-3.1-flash-lite-preview",
+                modelName = "gemini-2.5-flash",
                 generationConfig = generationConfig {
                     temperature = 0.15f
                     topK = 32
                     topP = 1f
-                    maxOutputTokens = 256
+                    maxOutputTokens = 2000
                 },
                 safetySettings = listOf(
                     SafetySetting(HarmCategory.HARASSMENT, HarmBlockThreshold.MEDIUM_AND_ABOVE),
